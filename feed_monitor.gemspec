@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["joshaidan@gmail.com"]
   spec.summary       = %q{Send email alerts for RSS feed updates}
   spec.description   = %q{Monitor RSS feeds for updates and send out email alerts for each updated item.}
-  spec.homepage      = "http://brianjones.ca"
+  spec.homepage      = "http://joshaidan.github.io/feed_monitor"
   spec.license       = "GPL-2.0"
 
   spec.files         = `git ls-files -z`.split("\x0")
