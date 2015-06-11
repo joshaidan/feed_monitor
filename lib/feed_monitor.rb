@@ -28,7 +28,7 @@ module FeedMonitor
     # Iterate through each feed entry
     feed.entries.reverse.each do |entry|
       site = Site.first_or_create(url: feed.feed_url)
-      if (!site.last_article_date or (site.last_article_date < entry.published) )
+      if (!site.last_article_date or (site.last_article_date.to_datetime < entry.published.to_datetime) )
 
         if entry.summary and entry.summary.size > 0
           body_message = entry.summary
