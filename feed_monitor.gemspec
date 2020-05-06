@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'dm-migrations', '~> 1.2', '>= 1.2.0'
   spec.add_runtime_dependency 'dm-sqlite-adapter', '~> 1.2', '>= 1.2.0'
   spec.add_runtime_dependency 'pony', '~> 1.13', '>= 1.13.1'
-  spec.add_runtime_dependency 'feedjira', '~> 3.1', '>= 3.1.1' 
+  spec.add_runtime_dependency 'feedjira', '~> 3.1', '>= 3.1.1'
+  spec.add_runtime_dependency 'httparty', '~> 0.18', '>= 0.18.0'
   
 end
