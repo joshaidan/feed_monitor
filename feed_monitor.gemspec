@@ -18,13 +18,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake", "~> 10.1"
+  spec.add_development_dependency "bundler", "~> 2.1.4"
+  spec.add_development_dependency "rake", "~> 13.0.1"
   
   spec.add_runtime_dependency 'dm-core', '~> 1.2', '>= 1.2.0'
   spec.add_runtime_dependency 'dm-migrations', '~> 1.2', '>= 1.2.0'
   spec.add_runtime_dependency 'dm-sqlite-adapter', '~> 1.2', '>= 1.2.0'
-  spec.add_runtime_dependency 'pony', '~> 1.11', '>= 1.11.0'
-  spec.add_runtime_dependency 'feedjira', '~> 1.4', '>= 1.4.0' 
+  spec.add_runtime_dependency 'pony', '~> 1.13', '>= 1.13.1'
+  spec.add_runtime_dependency 'feedjira', '~> 3.1', '>= 3.1.1' 
   
 end
