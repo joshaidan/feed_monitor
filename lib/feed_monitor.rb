@@ -3,6 +3,7 @@ require 'feedjira'
 require 'pony'
 require 'dm-core'
 require 'dm-migrations'
+require 'httparty'
 
 module FeedMonitor
   DataMapper.setup(:default, 'sqlite:feedmonitor.db')
@@ -20,7 +21,8 @@ module FeedMonitor
   
   def self.watch_feed(url, from_email, to_email)
     # Fetch the feed
-    feed = Feedjira::Feed.fetch_and_parse(url)
+    xml = HTTParty.get(url).body
+    feed = Feedjira.parse(xml)
     
     # Make sure it's the correct type of feed
     return if !feed.is_a?(Feedjira::Parser::Atom) and !feed.is_a?(Feedjira::Parser::RSS)
